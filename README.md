@@ -28,6 +28,8 @@ A full-stack **real-time chat application** built with the **MERN stack** (Mongo
 
 
 
+## 📂 Project Structure
+
 chat_app/
 ├── backend/
 │ ├── src/
@@ -49,5 +51,76 @@ chat_app/
 ├── package.json
 └── vite.config.js
 
-## 📂 Project Structure
+
+
+🔑 Authentication Flow
+
+Signup: /api/auth/signup → Creates a new user and returns a JWT cookie
+
+Login: /api/auth/login → Authenticates user and sets JWT cookie
+
+Protected routes: Middleware protectRoute checks JWT cookie
+
+Logout: /api/auth/logout → Clears JWT cookie
+
+💬 Real-Time Chat
+
+Uses Socket.IO for real-time communication
+
+Tracks online users and updates UI accordingly
+
+Messages are sent and received instantly
+
+✅ State Management
+
+Zustand is used for global state in the frontend:
+
+useAuthStore → Manages authentication, socket connection, and online users
+
+useChatStore → Manages chat state
+
+useThemeStore → Manages theme preferences
+
+📌 Usage
+
+Register a new account
+
+Login to access chat features
+
+Update your profile
+
+Chat with online users in real-time
+
+📦 Dependencies
+Backend
+
+express
+
+mongoose
+
+dotenv
+
+cors
+
+cookie-parser
+
+jsonwebtoken
+
+socket.io
+
+Frontend
+
+react
+
+vite
+
+react-hot-toast
+
+zustand
+
+axios
+
+socket.io-client
+
+tailwindcss
 
